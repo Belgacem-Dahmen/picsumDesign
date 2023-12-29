@@ -49,3 +49,38 @@ main img {
   min-width: 100%;
   height: 100%;
 }
+
+.tall {
+  grid-row: span 2;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1120px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  nav {
+    display: grid;
+    
+    grid-template-columns: repeat(4,1fr);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav img {
+    grid-column: span 4;
+    grid-row: 1;
+  }
+
+  
+  main {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+}
